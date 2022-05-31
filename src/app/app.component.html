@@ -1,7 +1,7 @@
 <div class="container">
     <div class="nav-container">
         <div class="logo">
-            <img src="../assets/shared/logo.svg" alt="" [routerLink]="['/home']">
+            <img src="./assets/shared/logo.svg" alt="" [routerLink]="['/home']">
         </div>
         <div class="nav-bar">
             <div class="rectangle"></div>
@@ -15,10 +15,10 @@
     </div>
     <div class="nav-bar-mobile">
         <div class="icon-hamb" *ngIf="!menuActive">
-            <img src="../assets/shared/icon-hamburger.svg" alt="" (click)="mobileMenu()">
+            <img src="./assets/shared/icon-hamburger.svg" alt="" (click)="mobileMenu()">
         </div>
         <div class="icon-hamb" *ngIf="menuActive">
-            <img src="../assets/shared/icon-close.svg" alt="" (click)="mobileMenu()">
+            <img src="./assets/shared/icon-close.svg" alt="" (click)="mobileMenu()">
         </div>
         <div class="menu-mobile" [ngClass]="menuActive ? 'active':''">
             <ul>
