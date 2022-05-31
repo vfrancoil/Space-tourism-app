@@ -1,0 +1,20 @@
+<div class="crew-content background-img">
+    <div class="crew-box">
+        <div class="crew-informations">
+            <div class="crew-title"><b>02</b>Meet your crew</div>
+            <div class="crew-text-box" [ngClass]="(crewAnim) ? 'animeTextBox':''">
+                <div class="crew-role">{{dataItem.role}}</div>
+                <div class="crew-name">{{dataItem.name}}</div>
+                <div class="crew-bio">{{dataItem.bio}}</div>
+            </div>
+            <div class="crew-change-member">
+                <div class="crew-dot-box">
+                    <div class="crew-dot" *ngFor="let i of data; let indexEl = index" [ngClass]="crewMemberSelect == indexEl ? 'active':''" (click)="changeMemberCrew(indexEl)"></div>
+                </div>
+            </div>
+        </div>
+        <div class="crew-images">
+            <img [src]="dataItem.images.png" alt="" [ngClass]="(crewAnim) ? 'animeImage':''">
+        </div>
+    </div>
+</div>

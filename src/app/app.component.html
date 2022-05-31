@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../assets/shared/logo.svg" alt="" [routerLink]="['/home']">
+        </div>
+        <div class="nav-bar">
+            <div class="rectangle"></div>
+            <div class="nav-items">
+                <div class="nav-item" [routerLink]="['/home']" [routerLinkActive]="'active'"><b>00</b> Home</div>
+                <div class="nav-item" [routerLink]="['/destination']" [routerLinkActive]="'active'"><b>01</b> Destination</div>
+                <div class="nav-item" [routerLink]="['/crew']" [routerLinkActive]="'active'"><b>02</b> Crew</div>
+                <div class="nav-item" [routerLink]="['/technology']" [routerLinkActive]="'active'"><b>03</b> Technology</div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar-mobile">
+        <div class="icon-hamb" *ngIf="!menuActive">
+            <img src="../assets/shared/icon-hamburger.svg" alt="" (click)="mobileMenu()">
+        </div>
+        <div class="icon-hamb" *ngIf="menuActive">
+            <img src="../assets/shared/icon-close.svg" alt="" (click)="mobileMenu()">
+        </div>
+        <div class="menu-mobile" [ngClass]="menuActive ? 'active':''">
+            <ul>
+                <li class="nav-item" [routerLink]="['/home']" (click)="mobileMenu()"><b>00</b> Home</li>
+                <li class="nav-item" [routerLink]="['/destination']" (click)="mobileMenu()"><b>01</b> Destination</li>
+                <li class="nav-item" [routerLink]="['/crew']" (click)="mobileMenu()"><b>02</b> Crew</li>
+                <li class="nav-item" [routerLink]="['/technology']" (click)="mobileMenu()"><b>03</b> Technology</li>
+            </ul>
+        </div>
+    </div>
+    <main class="content" [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </main>
+</div>

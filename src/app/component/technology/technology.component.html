@@ -1,0 +1,20 @@
+<div class="technology-content background-img">
+    <div class="technology-box">
+        <div class="technology-title"><b>03</b>Space Launch 101</div>
+        <div class="technology-informations">
+            <div class="technology-info-box">
+                <div class="technology-nav">
+                    <div class="nav-item" *ngFor="let i of data; let indexEl = index" [ngClass]="technologySelect == indexEl ? 'active':''" (click)="changeTechnology(indexEl)">{{indexEl+1}}</div>
+                </div>
+                <div class="technology-text-box" [ngClass]="(technologyAnimUp) ? 'animUp':''" [ngClass]="(technologyAnimDown) ? 'animDown':''">
+                    <div class="technology-termino">The Terminology...</div>
+                    <div class="technology-name">{{dataItem.name}}</div>
+                    <div class="technology-text">{{dataItem.description}}</div>
+                </div>
+            </div>
+            <div class="technology-images" [ngClass]="(technologySelect == 0) ? 'bg-zero': (technologySelect == 1) ? 'bg-one':'bg-two'">
+                <img [src]="dataItem.images.portrait" alt="" [ngClass]="(technologyAnimUp) ? 'animUp':''" [ngClass]="(technologyAnimDown) ? 'animDown':''">
+            </div>
+        </div>
+    </div>
+</div>

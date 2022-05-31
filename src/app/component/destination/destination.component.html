@@ -1,0 +1,31 @@
+<div class="destination-content background-img">
+    <div class="destination-box">
+        <div class="destination-title"><b>01</b>Pick your destination</div>
+        <div class="destination-container">
+            <div class="planet">
+                <img [src]="dataItem.images.png" alt="" [ngClass]="{'planet-animation' : planetAnim}">
+            </div>
+
+            <div class="planet-info">
+                <div class="choose-planet">
+                    <div class="nav-item" *ngFor="let i of data; let indexEl = index" [ngClass]="(planetSelect == indexEl) ? 'active':''" (click)="changePlanet(indexEl)">{{i.name}}
+                    </div>
+                </div>
+                <div class="planet-informations" [ngClass]="{'info-animation' : planetAnim}">
+                    <div class="planet-title">{{dataItem.name}}</div>
+                    <div class="planet-text">{{dataItem.description}}</div>
+                    <div class="rectangle"></div>
+                    <div class="planet-travel">
+                        <div class="planet-dist">
+                            <div>Avg. Distance</div>
+                            {{dataItem.distance}}
+                        </div>
+                        <div class="planet-time">
+                            <div>Est. Travel Time</div>
+                            {{dataItem.travel}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
