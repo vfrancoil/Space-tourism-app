@@ -26,7 +26,7 @@ import { HomeComponent } from './component/home/home.component';
       {path : 'destination', component:DestinationComponent, data: {animation:'isDestination'}},
       {path : 'crew', component:CrewComponent, data: {animation:'isCrew'}},
       {path : 'technology', component:TechnologyComponent, data: {animation:'isTechnology'}},
-      {path : '**', redirectTo:'home', pathMatch:'full'}
+      {path : '**', redirectTo:'', pathMatch:'full'}
     ])
   ],
   providers: [],
