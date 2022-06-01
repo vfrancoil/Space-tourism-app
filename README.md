@@ -4,6 +4,4 @@
 
 ## Welcome! 👋
 
-- Project link : https://vfrancoil.github.io/Space-tourism-app/
-
-🚀
+- Project link : https://vfrancoil.github.io/Space-tourism-app/ 🚀
